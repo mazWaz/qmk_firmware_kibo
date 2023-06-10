@@ -10,18 +10,68 @@
         "pid": "0x0001",
         "vid": "0x5748"
     },
+    "features": {
+        "backlight": true,
+        "bootmagic": true,
+        "command": false,
+        "console": false,
+        "extrakey": true,
+        "midi": false,
+        "mousekey": true,
+        "nkro": true,
+        "rgblight": true,
+        "unicode": true,
+        "encoder": true
+    },
+    "encoder": {
+        "rotary": [{ "pin_a": "GP14", "pin_b": "GP13" }]
+    },
+    "ws2812": {
+        "pin": "GP0",
+        "driver": "vendor"
+    },
+    "rgblight": {
+        "led_count": 12,
+        "max_brightness": 255,
+        "hue_steps": 10,
+        "saturation_steps": 17,
+        "brightness_steps": 17,
+        "animations": {
+            "alternating": true,
+            "breathing": true,
+            "christmas": true,
+            "knight": true,
+            "rainbow_mood": true,
+            "rainbow_swirl": true,
+            "rgb_test": true,
+            "snake": true,
+            "static_gradient": true,
+            "twinkle": true
+        }
+    },
+    "backlight": {
+        "driver": "custom"
+    },
+    "bootmagic": {
+        "matrix": [2, 1]
+    },
+    "matrix_pins": {
+        "direct": [
+            ["GP29", "GP28", "GP27"],
+            ["GP21", "GP20", "GP19"],
+            [null, "GP15", null]
+        ]
+    },
     "layouts": {
         "LAYOUT": {
             "layout": [
-                { "label": "K00", "x": 0, "y": 0 },
-                { "label": "K01", "x": 0, "y": 1 },
-                { "label": "K02", "x": 0, "y": 2 },
-                { "label": "K10", "x": 1, "y": 0 },
-                { "label": "K11", "x": 1, "y": 1 },
-                { "label": "K12", "x": 1, "y": 2 },
-                { "label": "K20", "x": 2, "y": 0 },
-                { "label": "K21", "x": 2, "y": 1 },
-                { "label": "K22", "x": 2, "y": 2 }
+                { "label": "K00", "x": 0, "y": 0, "matrix": [0, 0] },
+                { "label": "K01", "x": 0, "y": 1, "matrix": [0, 1] },
+                { "label": "K02", "x": 0, "y": 2, "matrix": [0, 2] },
+                { "label": "K10", "x": 1, "y": 0, "matrix": [1, 0] },
+                { "label": "K11", "x": 1, "y": 1, "matrix": [1, 1] },
+                { "label": "K12", "x": 1, "y": 2, "matrix": [1, 2] },
+                { "label": "K21", "x": 2, "y": 1, "matrix": [2, 1] }
             ]
         }
     }
